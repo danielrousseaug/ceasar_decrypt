@@ -34,9 +34,11 @@ def solve(phrase, dictionary):
 
         # count number of english words
         counter = 0
+        print(newEncryption)
         for word in wordList:
             newBool = binarySearch(dictionary, word.lower())
             if newBool:
+                print(word)
                 counter += 1
 
         # check if more than 20% are english words
@@ -47,7 +49,7 @@ def solve(phrase, dictionary):
 
 def userprompt():
     """
-    Usage: Prompts user for key and phrase, no arguments
+    Usage: Prompts user for key, no arguments
     required
     """
     phrase = input("Input the encrypted text: ")
@@ -83,34 +85,6 @@ def encrypt(phrase, key):
         newPhrase += char
 
     return newPhrase
-
-# def decrypt(phrase, key):
-#     """
-#     Usage: Enter unencrypted phrase and encryption key
-#     in format (phrase, key) to return encrypted phrase
-#     """
-#     newPhrase = ""
-
-#     for i in range(len(phrase)):
-#         char = phrase[i]
-
-#         if phrase[i].isupper():
-#             if ord(char) - key < 65:
-#                 diff = 65 - (ord(char) - key)
-#                 char = chr(91 - abs(diff) )
-#             else:
-#                 char = chr(ord(char) - key)
-
-#         if phrase[i].islower():
-#             if ord(char) - key < 97:
-#                 diff = 97 - (ord(char) - key)
-#                 char = chr(123 - abs(diff) )
-#             else:
-#                 char = chr(ord(char) - key)
-        
-#         newPhrase += char
-
-#     return newPhrase
 
 def binarySearch(alist, item):
     """
