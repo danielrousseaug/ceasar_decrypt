@@ -18,7 +18,7 @@ def main():
     if solveKey:
         solvePhrase = encrypt(phrase, solveKey)
         print("\nPHRASE SOLVED IN " + str(round(timeElapsed, 7)) + " SECONDS:\n" + solvePhrase)
-        print("\nENCRYPTION KEY: " + str(solveKey) + "\n")
+        print("\nENCRYPTION KEY: " + str(26 - solveKey) + "\n")
     else:
         print("ERROR: UNABLE TO SOLVE PHRASE, TIME ELAPSED: " + str(timeElapsed) )    
 
@@ -42,7 +42,7 @@ def solve(phrase, dictionary):
 
         # check if more than 20% are english words
         percentCorrect = counter / len(wordList)
-        if percentCorrect > 0.50:
+        if percentCorrect > 0.45:
             return i
     return False
 
