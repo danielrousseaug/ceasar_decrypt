@@ -9,7 +9,7 @@ Input the encrypted text: Aopz pz h jvumpkluaphs tlzzhnl.
 PHRASE SOLVED IN 0.0009995 SECONDS:
 This is a confidential message.
 
-ENCRYPTION KEY: 19
+ENCRYPTION KEY: 7
 ```
 ## Contributing
 Pull requests are welcome
