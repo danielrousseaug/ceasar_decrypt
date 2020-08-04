@@ -1,4 +1,3 @@
-import sys
 import json
 import re
 import time
@@ -85,33 +84,33 @@ def encrypt(phrase, key):
 
     return newPhrase
 
-def decrypt(phrase, key):
-    """
-    Usage: Enter unencrypted phrase and encryption key
-    in format (phrase, key) to return encrypted phrase
-    """
-    newPhrase = ""
+# def decrypt(phrase, key):
+#     """
+#     Usage: Enter unencrypted phrase and encryption key
+#     in format (phrase, key) to return encrypted phrase
+#     """
+#     newPhrase = ""
 
-    for i in range(len(phrase)):
-        char = phrase[i]
+#     for i in range(len(phrase)):
+#         char = phrase[i]
 
-        if phrase[i].isupper():
-            if ord(char) - key < 65:
-                diff = 65 - (ord(char) - key)
-                char = chr(91 - abs(diff) )
-            else:
-                char = chr(ord(char) - key)
+#         if phrase[i].isupper():
+#             if ord(char) - key < 65:
+#                 diff = 65 - (ord(char) - key)
+#                 char = chr(91 - abs(diff) )
+#             else:
+#                 char = chr(ord(char) - key)
 
-        if phrase[i].islower():
-            if ord(char) - key < 97:
-                diff = 97 - (ord(char) - key)
-                char = chr(123 - abs(diff) )
-            else:
-                char = chr(ord(char) - key)
+#         if phrase[i].islower():
+#             if ord(char) - key < 97:
+#                 diff = 97 - (ord(char) - key)
+#                 char = chr(123 - abs(diff) )
+#             else:
+#                 char = chr(ord(char) - key)
         
-        newPhrase += char
+#         newPhrase += char
 
-    return newPhrase
+#     return newPhrase
 
 def binarySearch(alist, item):
     """
