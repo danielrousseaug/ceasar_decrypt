@@ -1,5 +1,5 @@
-# Ceasar_decrypt
-Ceasar_decrypt is a python script that uses an english word list to decrypt text previously encrypted with the ceasar cipher.
+# ceasar_decrypt
+ceasar_decrypt is a python script that uses an english word list to decrypt text previously encrypted with the ceasar cipher.
 
 ## Usage
 ```
